@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BaseURL" xml:space="preserve">
-    <value>vk.com</value>
+  <data name="CreatePost" xml:space="preserve">
+    <value>wall.post</value>
+  </data>
+  <data name="DeletePost" xml:space="preserve">
+    <value>wall.delete</value>
+  </data>
+  <data name="EditPost" xml:space="preserve">
+    <value>wall.edit</value>
+  </data>
+  <data name="Extended" xml:space="preserve">
+    <value>&amp;extendeed=true</value>
+  </data>
+  <data name="GetNumberRegex" xml:space="preserve">
+    <value>\d+</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>autoperftester@gmail.com</value>
@@ -126,7 +138,34 @@
   <data name="Password" xml:space="preserve">
     <value>PuV6j_.2&amp;$m9h?UY</value>
   </data>
+  <data name="PostId" xml:space="preserve">
+    <value>&amp;post_id=</value>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>message=</value>
+  </data>
+  <data name="POSTTimeOut" xml:space="preserve">
+    <value>100000</value>
+  </data>
   <data name="Token" xml:space="preserve">
     <value>8aed6b129c0abc5e42040d0353f3a45fe75ac409df92b9b79aa48e8e451b7a16300e5907c3ff9b3f04e0c</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>owner_id=381108928</value>
+  </data>
+  <data name="CreateComment" xml:space="preserve">
+    <value>wall.createComment</value>
+  </data>
+  <data name="ImageSourse" xml:space="preserve">
+    <value>https://images2.alphacoders.com/591/59190.jpg</value>
+  </data>
+  <data name="LikeType" xml:space="preserve">
+    <value>&amp;type=post</value>
+  </data>
+  <data name="PostIsLiked" xml:space="preserve">
+    <value>likes.isLiked</value>
+  </data>
+  <data name="LikedObject" xml:space="preserve">
+    <value>&amp;item_id=</value>
   </data>
 </root>

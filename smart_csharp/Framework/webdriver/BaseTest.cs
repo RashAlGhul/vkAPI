@@ -100,10 +100,7 @@ namespace WebdriverFramework.Framework.WebDriver
             finally
             {
                 SQLConnection.CloseConnectons();
-                if (Browser != null)
-                {
-                    Browser.Quit(); 
-                }
+                Browser?.Quit();
             }
         }
 

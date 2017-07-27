@@ -61,11 +61,83 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to vk.com.
+        ///   Looks up a localized string similar to wall.createComment.
         /// </summary>
-        internal static string BaseURL {
+        internal static string CreateComment {
             get {
-                return ResourceManager.GetString("BaseURL", resourceCulture);
+                return ResourceManager.GetString("CreateComment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to wall.post.
+        /// </summary>
+        internal static string CreatePost {
+            get {
+                return ResourceManager.GetString("CreatePost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to wall.delete.
+        /// </summary>
+        internal static string DeletePost {
+            get {
+                return ResourceManager.GetString("DeletePost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to wall.edit.
+        /// </summary>
+        internal static string EditPost {
+            get {
+                return ResourceManager.GetString("EditPost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;extendeed=true.
+        /// </summary>
+        internal static string Extended {
+            get {
+                return ResourceManager.GetString("Extended", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to \d+.
+        /// </summary>
+        internal static string GetNumberRegex {
+            get {
+                return ResourceManager.GetString("GetNumberRegex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://images2.alphacoders.com/591/59190.jpg.
+        /// </summary>
+        internal static string ImageSourse {
+            get {
+                return ResourceManager.GetString("ImageSourse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;item_id=.
+        /// </summary>
+        internal static string LikedObject {
+            get {
+                return ResourceManager.GetString("LikedObject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;type=post.
+        /// </summary>
+        internal static string LikeType {
+            get {
+                return ResourceManager.GetString("LikeType", resourceCulture);
             }
         }
         
@@ -88,11 +160,56 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;post_id=.
+        /// </summary>
+        internal static string PostId {
+            get {
+                return ResourceManager.GetString("PostId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to likes.isLiked.
+        /// </summary>
+        internal static string PostIsLiked {
+            get {
+                return ResourceManager.GetString("PostIsLiked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to message=.
+        /// </summary>
+        internal static string PostMessage {
+            get {
+                return ResourceManager.GetString("PostMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100000.
+        /// </summary>
+        internal static string POSTTimeOut {
+            get {
+                return ResourceManager.GetString("POSTTimeOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 8aed6b129c0abc5e42040d0353f3a45fe75ac409df92b9b79aa48e8e451b7a16300e5907c3ff9b3f04e0c.
         /// </summary>
         internal static string Token {
             get {
                 return ResourceManager.GetString("Token", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to owner_id=381108928.
+        /// </summary>
+        internal static string UserId {
+            get {
+                return ResourceManager.GetString("UserId", resourceCulture);
             }
         }
     }

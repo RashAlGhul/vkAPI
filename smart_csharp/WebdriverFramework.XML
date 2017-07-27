@@ -1861,5 +1861,106 @@
             </summary>
             <returns>screenshot</returns>
         </member>
+        <member name="T:WebdriverFramework.VK.TestData">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.CreateComment">
+            <summary>
+              Looks up a localized string similar to wall.createComment.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.CreatePost">
+            <summary>
+              Looks up a localized string similar to wall.post.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.DeletePost">
+            <summary>
+              Looks up a localized string similar to wall.delete.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.EditPost">
+            <summary>
+              Looks up a localized string similar to wall.edit.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.Extended">
+            <summary>
+              Looks up a localized string similar to &amp;extendeed=true.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.GetNumberRegex">
+            <summary>
+              Looks up a localized string similar to \d+.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.ImageSourse">
+            <summary>
+              Looks up a localized string similar to https://images2.alphacoders.com/591/59190.jpg.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.LikedObject">
+            <summary>
+              Looks up a localized string similar to &amp;item_id=.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.LikeType">
+            <summary>
+              Looks up a localized string similar to &amp;type=post.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.Login">
+            <summary>
+              Looks up a localized string similar to autoperftester@gmail.com.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.Password">
+            <summary>
+              Looks up a localized string similar to PuV6j_.2&amp;$m9h?UY.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.PostId">
+            <summary>
+              Looks up a localized string similar to &amp;post_id=.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.PostIsLiked">
+            <summary>
+              Looks up a localized string similar to likes.isLiked.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.PostMessage">
+            <summary>
+              Looks up a localized string similar to message=.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.POSTTimeOut">
+            <summary>
+              Looks up a localized string similar to 100000.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.Token">
+            <summary>
+              Looks up a localized string similar to 8aed6b129c0abc5e42040d0353f3a45fe75ac409df92b9b79aa48e8e451b7a16300e5907c3ff9b3f04e0c.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.UserId">
+            <summary>
+              Looks up a localized string similar to owner_id=381108928.
+            </summary>
+        </member>
     </members>
 </doc>

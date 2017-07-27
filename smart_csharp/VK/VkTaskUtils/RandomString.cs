@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace WebdriverFramework.VK.VkTaskUtils
 {
     internal static class RandomString
     {
-        internal static string RandomName(int size, bool lowerCase)
+        internal static string RandomName(int size = 10, bool lowerCase = false)
         {
             StringBuilder builder = new StringBuilder();
             Random random = new Random();

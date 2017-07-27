@@ -112,8 +112,9 @@
     <Compile Include="Framework\WebDriver\Logger.cs" />
     <Compile Include="Framework\WebDriver\Screenshooter.cs" />
     <Compile Include="Framework\WebDriver\ScreenShotRemoteWebDriver.cs" />
-    <Compile Include="VK\PageObjects\BasePage.cs" />
     <Compile Include="VK\PageObjects\LoginPage.cs" />
+    <Compile Include="VK\Steps\VkPageSteps.cs" />
+    <Compile Include="VK\Tests\VkPageTest.cs" />
     <Compile Include="VK\VkTaskUtils\RandomString.cs" />
     <Compile Include="VK\VkTaskUtils\RequestResponce.cs" />
     <Compile Include="VK\PageObjects\MainPage.cs" />
@@ -226,10 +227,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="VK\Steps\" />
-    <Folder Include="VK\Tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="VK\TestData.resx">
       <Generator>ResXFileCodeGenerator</Generator>
