@@ -1932,6 +1932,11 @@
               Looks up a localized string similar to PuV6j_.2&amp;$m9h?UY.
             </summary>
         </member>
+        <member name="P:WebdriverFramework.VK.TestData.Photo">
+            <summary>
+              Looks up a localized string similar to &amp;attachment=photo381108928,C:\Users\IEUser\Downloads\vader.png.
+            </summary>
+        </member>
         <member name="P:WebdriverFramework.VK.TestData.PostId">
             <summary>
               Looks up a localized string similar to &amp;post_id=.
@@ -1954,12 +1959,17 @@
         </member>
         <member name="P:WebdriverFramework.VK.TestData.Token">
             <summary>
-              Looks up a localized string similar to 8aed6b129c0abc5e42040d0353f3a45fe75ac409df92b9b79aa48e8e451b7a16300e5907c3ff9b3f04e0c.
+              Looks up a localized string similar to 904da13c62ef685c2d17cdd3f3fb8430dcb1e6f23311809ba5b79e18fa4e97334dc30da82610f31b575ba.
             </summary>
         </member>
         <member name="P:WebdriverFramework.VK.TestData.UserId">
             <summary>
               Looks up a localized string similar to owner_id=381108928.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.WallUploadServer">
+            <summary>
+              Looks up a localized string similar to photos.getWallUploadServer.
             </summary>
         </member>
     </members>

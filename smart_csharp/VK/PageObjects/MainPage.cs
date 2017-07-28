@@ -1,5 +1,5 @@
-﻿using System.Text.RegularExpressions;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using System.Text.RegularExpressions;
 using WebdriverFramework.Framework.WebDriver.Elements;
 using WebdriverFramework.VK.VkTaskUtils;
 
@@ -9,12 +9,9 @@ namespace WebdriverFramework.VK.PageObjects
     {
         #region locators
         private readonly By _myPage = By.XPath(@"//span[contains(text(),'Моя Страница')]");
-        private readonly By _pagePosts = By.XPath(@"//div[@class='_post_content']");
-
-        private By PostInspector(string text)
-        {
-            return By.XPath($@"//div[@class='wall_post_text'][contains(text(),'{text})]");
-        }
+        private By TextInspector(string text) => By.XPath($@"//div[contains(text(),'{text}')]");
+        private By LikeLocator(int postId) => By.XPath($@"//*[@id='post{Regex.Match(TestData.UserId, $@"{TestData.GetNumberRegex}").
+            Value}_{postId}']//span[@class='post_like_link _link']");
 
         #endregion
 
@@ -22,7 +19,8 @@ namespace WebdriverFramework.VK.PageObjects
         private string _commentText;
         private int _postId;
         private readonly RequestResponce _rr = new RequestResponce();
-
+        private BaseElement _post;
+        private BaseElement _comment;
         public void GoToMyPage()
         {
             var myPageLink = new Link(_myPage, "MyPage");
@@ -32,8 +30,8 @@ namespace WebdriverFramework.VK.PageObjects
         public void CreatePost(string randomText)
         {
             _postText = randomText;
-            string getResitlt = _rr.GET(_rr.PostMessage(_postText));
-            int.TryParse(Regex.Match(getResitlt, $@"{TestData.GetNumberRegex}").Value, out _postId);
+            string getResult = _rr.POST(_rr.PostMessage(_postText));
+            int.TryParse(Regex.Match(getResult, $@"{TestData.GetNumberRegex}").Value, out _postId);
         }
 
         public void DeletePost()
@@ -41,10 +39,10 @@ namespace WebdriverFramework.VK.PageObjects
             _rr.POST(_rr.DeletePost(_postId));
         }
 
-        public void EditPost(string newRandomText)
+        public string EditPost(string newRandomText)
         {
             _postText = newRandomText;
-            _rr.POST(_rr.EditPost(_postId,_postText));
+            return _rr.POST(_rr.EditPost(_postId,_postText));
         }
 
         public void AddComment(string randomComment)
@@ -53,15 +51,41 @@ namespace WebdriverFramework.VK.PageObjects
             _rr.POST(_rr.AddComment(_postId, _commentText));
         }
 
-        public string PostLiked()
+        public void LikePost()
         {
-            return _rr.POST(_rr.LikedPost(_postId));
+            BaseElement like = new Button(LikeLocator(_postId),"Like");
+            like.Click();
+        }
+
+        public bool IsPostLiked()
+        {
+            string postResult = _rr.POST(_rr.LikedPost(_postId));
+            int.TryParse(Regex.Match(postResult, $@"{TestData.GetNumberRegex}").Value,out int flagResult);
+            return flagResult == 1;
         }
 
         public bool IsPostCreated()
         {
-            BaseElement post = new MenuItem(PostInspector(_postText), "Post");
-            return post.IsPresent();
+            _post = new MenuItem(TextInspector(_postText), "Post");
+            return _post.IsPresent();
+        }
+
+        public bool IsPostDeleted()
+        {
+            bool flag = !_post.IsExists();
+            return flag;
+        }
+
+        public bool IsPostEdited()
+        {
+            _post = new MenuItem(TextInspector(_postText), "EditPost");
+            return _post.IsPresent();
+        }
+
+        public bool IsPostCommented()
+        {
+            _comment = new MenuItem(TextInspector(_commentText), "Comment");
+            return _comment.IsPresent();
         }
     }
 }

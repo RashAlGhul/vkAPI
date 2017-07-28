@@ -160,6 +160,15 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;attachment=photo381108928,C:\Users\IEUser\Downloads\vader.png.
+        /// </summary>
+        internal static string Photo {
+            get {
+                return ResourceManager.GetString("Photo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;post_id=.
         /// </summary>
         internal static string PostId {
@@ -196,7 +205,7 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 8aed6b129c0abc5e42040d0353f3a45fe75ac409df92b9b79aa48e8e451b7a16300e5907c3ff9b3f04e0c.
+        ///   Looks up a localized string similar to 904da13c62ef685c2d17cdd3f3fb8430dcb1e6f23311809ba5b79e18fa4e97334dc30da82610f31b575ba.
         /// </summary>
         internal static string Token {
             get {
@@ -210,6 +219,15 @@ namespace WebdriverFramework.VK {
         internal static string UserId {
             get {
                 return ResourceManager.GetString("UserId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to photos.getWallUploadServer.
+        /// </summary>
+        internal static string WallUploadServer {
+            get {
+                return ResourceManager.GetString("WallUploadServer", resourceCulture);
             }
         }
     }

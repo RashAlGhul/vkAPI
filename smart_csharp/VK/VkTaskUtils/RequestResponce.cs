@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace WebdriverFramework.VK.VkTaskUtils
 {
@@ -69,7 +71,7 @@ namespace WebdriverFramework.VK.VkTaskUtils
         internal string EditPost(int postId, string postMessage)
         {
             return ApiRequestString(TestData.EditPost, 
-                $"{TestData.UserId}{TestData.PostId}{postId}&{TestData.PostMessage}{postMessage}");
+                $"{TestData.UserId}{TestData.PostId}{postId}&{TestData.PostMessage}{postMessage}{TestData.Photo}");
         }
 
         internal string AddComment(int postId, string commentMessage)
@@ -82,6 +84,24 @@ namespace WebdriverFramework.VK.VkTaskUtils
         {
             return ApiRequestString(TestData.PostIsLiked,
                 $"{TestData.UserId}{TestData.LikeType}&{TestData.UserId}{TestData.LikedObject}{postId}");
+        }
+
+        private string UplaodImageServer()
+        {
+            return ApiRequestString(TestData.WallUploadServer);
+        }
+
+        private string UpladServerURL()
+        {
+            var test = JObject.Parse(POST(UplaodImageServer()));
+            return test
+                .Descendants()
+                .OfType<JProperty>()
+                .First(p => p.Name == "response")
+                .Value
+                .OfType<JProperty>()
+                .First(p => p.Name == "upload_url")
+                .Value.ToString();
         }
     }
 }

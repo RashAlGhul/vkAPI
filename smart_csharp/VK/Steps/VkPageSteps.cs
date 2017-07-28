@@ -28,9 +28,9 @@ namespace WebdriverFramework.VK.Steps
              _mp.DeletePost();
         }
 
-        public void EditPost(string newRandomText)
+        public string EditPost(string newRandomText)
         {
-            _mp.EditPost(newRandomText);
+            return _mp.EditPost(newRandomText);
         }
 
         public bool IsPostCreated()
@@ -43,9 +43,29 @@ namespace WebdriverFramework.VK.Steps
             _mp.AddComment(randomComment);
         }
 
-        public string UserLikesPost()
+        public void LikePost()
         {
-            return _mp.PostLiked();
+            _mp.LikePost();
+        }
+
+        public bool IsUserLikesPost()
+        {
+            return _mp.IsPostLiked();
+        }
+
+        public bool IsPostEdited()
+        {
+            return _mp.IsPostEdited();
+        }
+
+        public bool IsPostDeleted()
+        {
+            return _mp.IsPostDeleted();
+        }
+
+        public bool IsPostCommented()
+        {
+            return _mp.IsPostCommented();
         }
     }
 }

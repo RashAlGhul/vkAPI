@@ -148,7 +148,7 @@
     <value>100000</value>
   </data>
   <data name="Token" xml:space="preserve">
-    <value>8aed6b129c0abc5e42040d0353f3a45fe75ac409df92b9b79aa48e8e451b7a16300e5907c3ff9b3f04e0c</value>
+    <value>904da13c62ef685c2d17cdd3f3fb8430dcb1e6f23311809ba5b79e18fa4e97334dc30da82610f31b575ba</value>
   </data>
   <data name="UserId" xml:space="preserve">
     <value>owner_id=381108928</value>
@@ -167,5 +167,11 @@
   </data>
   <data name="LikedObject" xml:space="preserve">
     <value>&amp;item_id=</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>&amp;attachment=photo381108928,C:\Users\IEUser\Downloads\vader.png</value>
+  </data>
+  <data name="WallUploadServer" xml:space="preserve">
+    <value>photos.getWallUploadServer</value>
   </data>
 </root>
