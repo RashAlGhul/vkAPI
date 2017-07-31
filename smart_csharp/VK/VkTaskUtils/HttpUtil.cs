@@ -11,6 +11,7 @@ namespace WebdriverFramework.VK.VkTaskUtils
     internal class HttpUtil
     {
         internal string imageId;
+
         internal string GET(string request)
         {
             WebRequest req = WebRequest.Create(request);
