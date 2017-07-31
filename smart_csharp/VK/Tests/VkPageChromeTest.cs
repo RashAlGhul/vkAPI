@@ -11,7 +11,7 @@ namespace WebdriverFramework.VK.Tests
     {
         private readonly VkPageSteps _steps = new VkPageSteps();
 
-        private string x, _message = RandomString.RandomName();
+        private string _message = RandomString.RandomName();
 
         [TestMethod]
         [DeploymentItem("chromedriver.exe")]
@@ -22,7 +22,7 @@ namespace WebdriverFramework.VK.Tests
             _steps.CreatePost(_message);
             _message = RandomString.RandomName();
             Assert.IsTrue(_steps.IsPostCreated());
-            x = _steps.EditPost(_message);
+            _steps.EditPost(_message);
             Assert.IsTrue(_steps.IsPostEdited());
             _message = RandomString.RandomName();
             _steps.AddComment(_message);

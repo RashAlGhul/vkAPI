@@ -28,9 +28,9 @@ namespace WebdriverFramework.VK.Steps
              _mp.DeletePost();
         }
 
-        public string EditPost(string newRandomText)
+        public void EditPost(string newRandomText)
         {
-            return _mp.EditPost(newRandomText);
+            _mp.EditPost(newRandomText);
         }
 
         public bool IsPostCreated()

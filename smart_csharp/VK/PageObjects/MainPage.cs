@@ -40,10 +40,10 @@ namespace WebdriverFramework.VK.PageObjects
             _util.POST(_util.DeletePost(_postId));
         }
 
-        public string EditPost(string newRandomText)
+        public void EditPost(string newRandomText)
         {
             _postText = newRandomText;
-            return _util.POST(_util.EditPost(_postId,_postText));
+            _util.POST(_util.EditPost(_postId,_postText));
         }
 
         public void AddComment(string randomComment)
