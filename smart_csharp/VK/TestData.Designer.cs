@@ -61,6 +61,15 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;attachment=.
+        /// </summary>
+        internal static string Attachment {
+            get {
+                return ResourceManager.GetString("Attachment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to wall.createComment.
         /// </summary>
         internal static string CreateComment {
@@ -115,6 +124,24 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;hash=.
+        /// </summary>
+        internal static string Hash {
+            get {
+                return ResourceManager.GetString("Hash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C:\Users\IEUser\Downloads\vader.png.
+        /// </summary>
+        internal static string ImagePath {
+            get {
+                return ResourceManager.GetString("ImagePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://images2.alphacoders.com/591/59190.jpg.
         /// </summary>
         internal static string ImageSourse {
@@ -151,6 +178,15 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to owner_id=381108928.
+        /// </summary>
+        internal static string OwnerId {
+            get {
+                return ResourceManager.GetString("OwnerId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PuV6j_.2&amp;$m9h?UY.
         /// </summary>
         internal static string Password {
@@ -160,7 +196,7 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &amp;attachment=photo381108928,C:\Users\IEUser\Downloads\vader.png.
+        ///   Looks up a localized string similar to &amp;photo=.
         /// </summary>
         internal static string Photo {
             get {
@@ -205,6 +241,24 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to photos.saveWallPhoto.
+        /// </summary>
+        internal static string SavePhoto {
+            get {
+                return ResourceManager.GetString("SavePhoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;server=.
+        /// </summary>
+        internal static string Server {
+            get {
+                return ResourceManager.GetString("Server", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 904da13c62ef685c2d17cdd3f3fb8430dcb1e6f23311809ba5b79e18fa4e97334dc30da82610f31b575ba.
         /// </summary>
         internal static string Token {
@@ -214,7 +268,7 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to owner_id=381108928.
+        ///   Looks up a localized string similar to user_id=381108928.
         /// </summary>
         internal static string UserId {
             get {

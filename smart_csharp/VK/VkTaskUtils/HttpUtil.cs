@@ -8,8 +8,9 @@ using Newtonsoft.Json.Linq;
 
 namespace WebdriverFramework.VK.VkTaskUtils
 {
-    internal class RequestResponce
+    internal class HttpUtil
     {
+        internal string imageId;
         internal string GET(string request)
         {
             WebRequest req = WebRequest.Create(request);
@@ -65,36 +66,42 @@ namespace WebdriverFramework.VK.VkTaskUtils
 
         internal string DeletePost(int postId)
         {
-            return ApiRequestString(TestData.DeletePost, $"{TestData.UserId}{TestData.PostId}{postId}");
+            return ApiRequestString(TestData.DeletePost, $"{TestData.OwnerId}{TestData.PostId}{postId}");
         }
 
         internal string EditPost(int postId, string postMessage)
         {
+            string x = POST(UploadImage());
+            var image = JObject.Parse(x);
+            imageId = image.SelectToken("response[0].id").ToString();
             return ApiRequestString(TestData.EditPost, 
-                $"{TestData.UserId}{TestData.PostId}{postId}&{TestData.PostMessage}{postMessage}{TestData.Photo}");
+                TestData.OwnerId, TestData.PostId, $"{postId}&{TestData.PostMessage}",postMessage, 
+                TestData.Attachment,imageId);
         }
 
         internal string AddComment(int postId, string commentMessage)
         {
             return ApiRequestString(TestData.CreateComment, 
-                $"{TestData.UserId}{TestData.PostId}{postId}&{TestData.PostMessage}{commentMessage}");
+                $"{TestData.OwnerId}{TestData.PostId}{postId}&{TestData.PostMessage}{commentMessage}");
         }
 
         internal string LikedPost(int postId)
         {
             return ApiRequestString(TestData.PostIsLiked,
-                $"{TestData.UserId}{TestData.LikeType}&{TestData.UserId}{TestData.LikedObject}{postId}");
+                $"{TestData.OwnerId}{TestData.LikeType}&{TestData.OwnerId}{TestData.LikedObject}{postId}");
         }
 
+        ///
+        /// 
         private string UplaodImageServer()
         {
             return ApiRequestString(TestData.WallUploadServer);
         }
 
-        private string UpladServerURL()
+        private string UploadServerUrl()
         {
-            var test = JObject.Parse(POST(UplaodImageServer()));
-            return test
+            var response = JObject.Parse(POST(UplaodImageServer()));
+            return response
                 .Descendants()
                 .OfType<JProperty>()
                 .First(p => p.Name == "response")
@@ -102,6 +109,38 @@ namespace WebdriverFramework.VK.VkTaskUtils
                 .OfType<JProperty>()
                 .First(p => p.Name == "upload_url")
                 .Value.ToString();
+        }
+
+        private string ImageUploadData()
+        {
+            string url = UploadServerUrl();
+            var http = new WebClient();
+            var responseArray = http.UploadFile(url, TestData.ImagePath);
+            var ascii = new ASCIIEncoding();
+            var result = ascii.GetString(responseArray);
+            return result;
+        }
+
+        public string UploadImage()
+        {
+            var data = JObject.Parse(ImageUploadData());
+            string server = data
+                .Descendants()
+                .OfType<JProperty>()
+                .First(p => p.Name == "server")
+                .Value.ToString();
+            string photo = data
+                .Descendants()
+                .OfType<JProperty>()
+                .First(p => p.Name == "photo")
+                .Value.ToString();
+            string hash = data
+                .Descendants()
+                .OfType<JProperty>()
+                .First(p => p.Name == "hash")
+                .Value.ToString();
+            return ApiRequestString(TestData.SavePhoto, TestData.UserId, TestData.Photo, photo, 
+                TestData.Server, server, TestData.Hash, hash);
         }
     }
 }

@@ -150,7 +150,7 @@
   <data name="Token" xml:space="preserve">
     <value>904da13c62ef685c2d17cdd3f3fb8430dcb1e6f23311809ba5b79e18fa4e97334dc30da82610f31b575ba</value>
   </data>
-  <data name="UserId" xml:space="preserve">
+  <data name="OwnerId" xml:space="preserve">
     <value>owner_id=381108928</value>
   </data>
   <data name="CreateComment" xml:space="preserve">
@@ -168,10 +168,28 @@
   <data name="LikedObject" xml:space="preserve">
     <value>&amp;item_id=</value>
   </data>
-  <data name="Photo" xml:space="preserve">
-    <value>&amp;attachment=photo381108928,C:\Users\IEUser\Downloads\vader.png</value>
+  <data name="Attachment" xml:space="preserve">
+    <value>&amp;attachment=</value>
   </data>
   <data name="WallUploadServer" xml:space="preserve">
     <value>photos.getWallUploadServer</value>
+  </data>
+  <data name="Hash" xml:space="preserve">
+    <value>&amp;hash=</value>
+  </data>
+  <data name="ImagePath" xml:space="preserve">
+    <value>C:\Users\IEUser\Downloads\vader.png</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>&amp;photo=</value>
+  </data>
+  <data name="SavePhoto" xml:space="preserve">
+    <value>photos.saveWallPhoto</value>
+  </data>
+  <data name="Server" xml:space="preserve">
+    <value>&amp;server=</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>user_id=381108928</value>
   </data>
 </root>

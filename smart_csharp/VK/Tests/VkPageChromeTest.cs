@@ -22,14 +22,13 @@ namespace WebdriverFramework.VK.Tests
             _steps.CreatePost(_message);
             _message = RandomString.RandomName();
             Assert.IsTrue(_steps.IsPostCreated());
-            x =_steps.EditPost(_message);
+            x = _steps.EditPost(_message);
             Assert.IsTrue(_steps.IsPostEdited());
             _message = RandomString.RandomName();
             _steps.AddComment(_message);
             Assert.IsTrue(_steps.IsPostCommented());
             _steps.LikePost();
             Assert.IsTrue(_steps.IsUserLikesPost());
-            Thread.Sleep(5000);
             _steps.DeletePost();
             Assert.IsTrue(_steps.IsPostDeleted());
         }

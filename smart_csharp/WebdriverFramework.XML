@@ -1861,6 +1861,10 @@
             </summary>
             <returns>screenshot</returns>
         </member>
+        <member name="M:WebdriverFramework.VK.VkTaskUtils.HttpUtil.UplaodImageServer">
+            
+             
+        </member>
         <member name="T:WebdriverFramework.VK.TestData">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
@@ -1875,6 +1879,11 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.Attachment">
+            <summary>
+              Looks up a localized string similar to &amp;attachment=.
             </summary>
         </member>
         <member name="P:WebdriverFramework.VK.TestData.CreateComment">
@@ -1907,6 +1916,16 @@
               Looks up a localized string similar to \d+.
             </summary>
         </member>
+        <member name="P:WebdriverFramework.VK.TestData.Hash">
+            <summary>
+              Looks up a localized string similar to &amp;hash=.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.ImagePath">
+            <summary>
+              Looks up a localized string similar to C:\Users\IEUser\Downloads\vader.png.
+            </summary>
+        </member>
         <member name="P:WebdriverFramework.VK.TestData.ImageSourse">
             <summary>
               Looks up a localized string similar to https://images2.alphacoders.com/591/59190.jpg.
@@ -1927,6 +1946,11 @@
               Looks up a localized string similar to autoperftester@gmail.com.
             </summary>
         </member>
+        <member name="P:WebdriverFramework.VK.TestData.OwnerId">
+            <summary>
+              Looks up a localized string similar to owner_id=381108928.
+            </summary>
+        </member>
         <member name="P:WebdriverFramework.VK.TestData.Password">
             <summary>
               Looks up a localized string similar to PuV6j_.2&amp;$m9h?UY.
@@ -1934,7 +1958,7 @@
         </member>
         <member name="P:WebdriverFramework.VK.TestData.Photo">
             <summary>
-              Looks up a localized string similar to &amp;attachment=photo381108928,C:\Users\IEUser\Downloads\vader.png.
+              Looks up a localized string similar to &amp;photo=.
             </summary>
         </member>
         <member name="P:WebdriverFramework.VK.TestData.PostId">
@@ -1957,6 +1981,16 @@
               Looks up a localized string similar to 100000.
             </summary>
         </member>
+        <member name="P:WebdriverFramework.VK.TestData.SavePhoto">
+            <summary>
+              Looks up a localized string similar to photos.saveWallPhoto.
+            </summary>
+        </member>
+        <member name="P:WebdriverFramework.VK.TestData.Server">
+            <summary>
+              Looks up a localized string similar to &amp;server=.
+            </summary>
+        </member>
         <member name="P:WebdriverFramework.VK.TestData.Token">
             <summary>
               Looks up a localized string similar to 904da13c62ef685c2d17cdd3f3fb8430dcb1e6f23311809ba5b79e18fa4e97334dc30da82610f31b575ba.
@@ -1964,7 +1998,7 @@
         </member>
         <member name="P:WebdriverFramework.VK.TestData.UserId">
             <summary>
-              Looks up a localized string similar to owner_id=381108928.
+              Looks up a localized string similar to user_id=381108928.
             </summary>
         </member>
         <member name="P:WebdriverFramework.VK.TestData.WallUploadServer">
