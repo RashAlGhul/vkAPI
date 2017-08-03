@@ -114,8 +114,7 @@
     <Compile Include="Framework\WebDriver\ScreenShotRemoteWebDriver.cs" />
     <Compile Include="VK\PageObjects\LoginPage.cs" />
     <Compile Include="VK\Steps\VkPageSteps.cs" />
-    <Compile Include="VK\Tests\VkPageFirefoxTest.cs" />
-    <Compile Include="VK\Tests\VkPageChromeTest.cs" />
+    <Compile Include="VK\Tests\VkPageTest.cs" />
     <Compile Include="VK\VkTaskUtils\RandomString.cs" />
     <Compile Include="VK\VkTaskUtils\HttpUtil.cs" />
     <Compile Include="VK\PageObjects\MainPage.cs" />

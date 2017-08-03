@@ -1,4 +1,4 @@
-﻿
+﻿using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebdriverFramework.Framework.WebDriver;
 using WebdriverFramework.VK.Steps;
@@ -7,14 +7,14 @@ using WebdriverFramework.VK.VkTaskUtils;
 namespace WebdriverFramework.VK.Tests
 {
     [TestClass]
-    public class VkPageFirefoxTest:BaseTest
+    public class VkPageTest:BaseTest
     {
         private readonly VkPageSteps _steps = new VkPageSteps();
 
         private string _message = RandomString.RandomName();
 
         [TestMethod]
-        [DeploymentItem("geckodriver.exe")]
+        [DeploymentItem("chromedriver.exe")]//change to geckodriver.exe for firefox
         public override void RunTest()
         {
             _steps.Login();

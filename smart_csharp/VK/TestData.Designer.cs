@@ -133,6 +133,15 @@ namespace WebdriverFramework.VK {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://api.vk.com/method/{0}?{1}&amp;access_token={2}.
+        /// </summary>
+        internal static string Host {
+            get {
+                return ResourceManager.GetString("Host", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C:\Users\IEUser\Downloads\vader.png.
         /// </summary>
         internal static string ImagePath {

@@ -15,7 +15,7 @@ namespace WebdriverFramework.VK.PageObjects
         private readonly By _passwordField = By.XPath(@"//input[@id='index_pass']");
         private readonly By _loginButton = By.XPath(@"//button[@id='index_login_button']");
 
-        public void Longin()
+        public void Login()
         {
             var login = new TextBox(_loginField, "Login");
             var pass = new TextBox(_passwordField,"Password");

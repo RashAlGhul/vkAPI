@@ -57,7 +57,7 @@ namespace WebdriverFramework.VK.VkTaskUtils
             {
                 par += s;
             }
-            return $@"https://api.vk.com/method/{methodName}?{par}&access_token={TestData.Token}";
+            return string.Format(TestData.Host,methodName, par, TestData.Token); //($@"https://api.vk.com/method/{methodName}?{par}&access_token={TestData.Token}");
         }
 
         internal string PostMessage(string postMessage)

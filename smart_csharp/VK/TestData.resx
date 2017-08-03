@@ -192,4 +192,7 @@
   <data name="UserId" xml:space="preserve">
     <value>user_id=381108928</value>
   </data>
+  <data name="Host" xml:space="preserve">
+    <value>https://api.vk.com/method/{0}?{1}&amp;access_token={2}</value>
+  </data>
 </root>

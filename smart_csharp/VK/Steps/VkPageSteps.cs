@@ -10,7 +10,7 @@ namespace WebdriverFramework.VK.Steps
         public void Login()
         {
             
-            _lp.Longin();
+            _lp.Login();
         }
 
         public void GoToMyPage()
