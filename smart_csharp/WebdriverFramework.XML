@@ -1921,6 +1921,11 @@
               Looks up a localized string similar to &amp;hash=.
             </summary>
         </member>
+        <member name="P:WebdriverFramework.VK.TestData.Host">
+            <summary>
+              Looks up a localized string similar to https://api.vk.com/method/{0}?{1}&amp;access_token={2}.
+            </summary>
+        </member>
         <member name="P:WebdriverFramework.VK.TestData.ImagePath">
             <summary>
               Looks up a localized string similar to C:\Users\IEUser\Downloads\vader.png.
